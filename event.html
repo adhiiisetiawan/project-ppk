@@ -14,22 +14,10 @@
         <div data-role="header">
             <h1>Event</h1>
         </div>
-        <button type="button" onclick="window.location.href='#event-insert'">Tambah</button>
-        <div class="search-container">
-            <form action="/action_page.php">
-                <!-- aku gaero action iki opo selanjute -->
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i>Cari</button>
-                <!-- aku gaero isine class iki opo selanjute -->
-            </form>
-        </div>
-
         <div role="main" class="ui-content">
-            <ul id="list-mhs" data-role="listview" data-inset="true" data-filter="false">
+            <ul id="list-mhs" data-role="listview" data-inset="true" data-filter="true">
             </ul>    
         </div>
-
-
         <button type="button" onclick="window.location.href='index.html'">Kembali</button>
         <div data-role="footer">
             <h4>&#9996;PPK 2019&#9996;</h4>
@@ -54,7 +42,7 @@
     <div data-role="footer">
         <h4>&#9996;PPK 2019&#9996;</h4>
     </div>
-    <script src=".js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
     <script>Application.initApplication();</script>
 </body>
 

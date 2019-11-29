@@ -6,7 +6,7 @@ var Application = {
     },
     initShowMhs : function(){
       $.ajax({
-        url: 'https://api.myjson.com/bins/easys',
+        url: 'https://api-ppk.herokuapp.com/tiket',
         type: 'get',
         beforeSend : function() {
           $.mobile.loading('show',{
@@ -17,9 +17,9 @@ var Application = {
         success : function(dataObject) {
           var appendList='';
           for(var i=0; i < dataObject.length; i++){
-            var appendlist = '<li><a href=#page-two ?id='+dataObject[i].NIM+
-            '"target="_self" id="detail-mhs" data-nimmhs="'+dataObject[i].NIM+'"><h2>'+dataObject[i].Nama+
-'</h2><p>'+dataObject[i].NIM+'</p><p><b>'+dataObject[i].Fakultas+'</b></p></a></li>';
+            var appendlist = '<li><a href=#page-two ?id='+dataObject[i].id_tiket+
+            '"target="_self" id="detail-mhs" data-nimmhs="'+dataObject[i].id_tiket+'"><h2>'+dataObject[i].nama_tiket+
+'</h2><p>'+dataObject[i].harga_tiket+'</p><p><b>'+dataObject[i].harga_tiket+'</b></p></a></li>';
             $('#list-mhs').append(appendlist);}
             $('#list-mhs').listview('refresh');
           },
