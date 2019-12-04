@@ -10,97 +10,94 @@
 </head>
 
 <body>
+    //Show Data Event
+    <div data-role="page" id="page-promo" class="ui-body-b">
+        <div data-role="header">
+            <h1>Promosi</h1>
+        </div>
 
-//Show Data Promo
-<div data-role="page" id="page-event" class="ui-body-b">
-    <div data-role="header">
-        <h1>Promo</h1>
-    </div>
-    <div role="main" class="ui-content">
-        <ul id="list-event" data-role="listview" data-inset="true" data-filter="true"></ul>
-        <button type="button" onclick="window.location.href='#event-insert'">Tambahkan Data</button>
-    </div>
-<!--    <button type="button" onclick="window.location.reload();">Refresh</button>-->
-    <!-- tab bar with standard icons -->
-    <div data-role="footer" data-position="fixed">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="javascript:" onclick="window.location.href='index.html'" data-icon="calendar" type="button">Event</a></li>
-                <li><a href="javascript:" onclick="window.location.href='promosi.html'" data-icon="tag" type="button">Promo</a></li>
-                <li><a href="#" data-icon="user">Member</a></li>
-                <li><a href="#" data-icon="shop">Membeli</a></li>
+        <div role="main" class="ui-content">
+            <ul id="list-event" data-role="listview" data-inset="true" data-filter="true">
             </ul>
+            <button type="button" onclick="window.location.href='#promo-insert'">Tambahkan Data</button>
+        </div>
+
+
+        <!-- tab bar with standard icons -->
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="javascript:" onclick="window.location.href='index.html'" data-icon="calendar"
+                            type="button">Event</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='promosi.html'" data-icon="tag"
+                            type="button">Promo</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='member.html'" data-icon="user"
+                            type="button">Member</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='pesanan.html'" data-icon="shop"
+                            type="button">Membeli</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
-//Detail Promo
-<div data-role="page" id="page-two">
-    <div data-role="header">
-        <h1>Detail Promo</h1>
-    </div>
-    <div data-role="navbar">
-        <ul>
-            <li><a href="promosi.html" data-icon="arrow-l">Back</a></li>
-        </ul>
-    </div>
+    //Detail Promo
+    <div data-role="page" id="page-two">
+        <div data-role="header">
+            <h1>Detail Promo</h1>
+        </div>
+        <div role="main" class="ui-content" id="main2">
+            <p id="p-nama_promo"></p><br>
+            <p id="p-kode_promo"></p><br>
+            <p id="p-diskon"></p><br>
+        </div>
 
-    <div role="main" class="ui-content" id="main2">
-        <p id="p-nama_promo"></p><br>
-        <p id="p-kode_promo"></p><br>
-        <p id="p-diskon"></p><br>
-    </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="promosi.html" data-icon="arrow-l">Back</a></li>
+                </ul>
+            </div>
 
-    <div data-role="footer" data-position="fixed">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="javascript:" onclick="window.location.href='index.html'" data-icon="calendar" type="button">Event</a></li>
-                <li><a href="javascript:" onclick="window.location.href='promosi.html'" data-icon="tag" type="button">Promo</a></li>                <li><a href="#" data-icon="user">Member</a></li>
-                <li><a href="#" data-icon="shop">Membeli</a></li>
-            </ul>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="javascript:" onclick="window.location.href='index.html'" data-icon="calendar"
+                            type="button">Event</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='promosi.html'" data-icon="tag"
+                            type="button">Promo</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='member.html'" data-icon="user"
+                            type="button">Member</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='pesanan.html'" data-icon="shop"
+                            type="button">Membeli</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
 
-//Insert Event
-<div data-role="page" id="event-insert" class="ui-body-b">
-    <div data-role="header">
-        <h1>Masukkan Order</h1>
+    //Insert promo
+    <div data-role="page" id="promo-insert" class="ui-body-b">
+        <div data-role="header">
+            <h1>Masukkan Promo</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+            <label>
+                Nama Promo <input type="text" name="event"><br>
+            </label>
+
+            <label>
+                Kode Promo <input type="text" name="eaddress"><br>
+            </label>
+
+            <label>
+                Diskon <input type="text" name="date"><br>
+            </label>
+
+            <input type="submit" value="Submit" onclick="window.location.href='#page-promo'">
+        </div>
     </div>
-
-    <div role="main" class="ui-content">
-        <label>
-            Nama Event <input type="text" name="event"><br>
-        </label>
-
-        <label>
-            Alamat <input type="text" name="eaddress"><br>
-        </label>
-
-        <label>
-            Tanggal <input type="text" name="date"><br>
-        </label>
-
-        <label>
-            Harga <input type="text" name="harga"><br>
-        </label>
-
-        <label>
-            Jumlah Tiket <input type="text" name="tixavailable"><br>
-        </label>
-
-        <label>
-            Kode Tiket <input type="text" name="kodeTiket"><br>
-        </label>
-
-        <input type="submit" value="Submit" onclick="window.location.href='#page-event'">
-    </div>
-</div>
-
-
-<script src="js/appPromo.js" type="text/javascript"></script>
-<script>Application.initApplication();</script>
+    <script src="js/appPromo.js" type="text/javascript"></script>
+    <script>Application.initApplication();</script>
 </body>
 
 </html>

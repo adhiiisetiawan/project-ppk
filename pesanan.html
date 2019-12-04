@@ -10,45 +10,107 @@
 </head>
 
 <body>
-    <div data-role="page" id="page-order" class="ui-body-b">
+    //Show Data Event
+    <div data-role="page" id="page-event" class="ui-body-b">
         <div data-role="header">
-            <h1>Order</h1>
-        </div>
-        <button type="button" onclick="window.location.href='#order-insert'">Tambah</button>
-        <div class="search-container">
-            <form action="/action_page.php">
-                <!-- aku gaero action iki opo selanjute -->
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i>Cari</button>
-                <!-- aku gaero isine class iki opo selanjute -->
-            </form>
+            <h1>Event</h1>
         </div>
 
-        <button type="button" onclick="window.location.href='index.html'">Kembali</button>
-        <div data-role="footer">
-            <h4>&#9996;PPK 2019&#9996;</h4>
+        <div role="main" class="ui-content">
+            <ul id="list-event" data-role="listview" data-inset="true" data-filter="true">
+            </ul>
+            <button type="button" onclick="window.location.href='#event-insert'">Tambahkan Data</button>
+        </div>
+
+
+        <!-- tab bar with standard icons -->
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="javascript:" onclick="window.location.href='index.html'" data-icon="calendar"
+                            type="button">Event</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='promosi.html'" data-icon="tag"
+                            type="button">Promo</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='member.html'" data-icon="user"
+                            type="button">Member</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='pesanan.html'" data-icon="shop"
+                            type="button">Membeli</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <div data-role="page" id="order-insert" class="ui-body-b">
+    //Detail Event
+    <div data-role="page" id="page-two">
+        <div data-role="header">
+            <h1>Detail Event</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="arrow-l">Back</a></li>
+            </ul>
+        </div>
+
+        <div role="main" class="ui-content" id="main2">
+            <p id="p-nama_event"></p><br>
+            <p id="p-alamat"></p><br>
+            <p id="p-tanggal"></p><br>
+            <p id="p-harga"></p><br>
+            <p id="p-stok_tiket"></p><br>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="javascript:" onclick="window.location.href='index.html'" data-icon="calendar"
+                        type="button">Event</a></li>
+                <li><a href="javascript:" onclick="window.location.href='promosi.html'" data-icon="tag"
+                        type="button">Promo</a></li>
+                <li><a href="javascript:" onclick="window.location.href='member.html'" data-icon="user"
+                        type="button">Member</a></li>
+                <li><a href="javascript:" onclick="window.location.href='pesanan.html'" data-icon="shop"
+                        type="button">Membeli</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    //Insert Event
+    <div data-role="page" id="event-insert" class="ui-body-b">
         <div data-role="header">
             <h1>Masukkan Order</h1>
         </div>
-        Event <input type="text" name="event"><br>
-        Kuantitas <input type="text" name="quantity"><br>
-        Alamat<input type="text" name="eaddress"><br>
-        Harga <input type="text" name="harga"><br>
-        Total <input type="text" name="total" disabled><br>
-        ID Tiket <input type="text" name="idtix"><br>
-        Pembeli <input type="text" name="member"><br>
-        <input type="submit" value="Submit" onclick="window.location.href='#page-order'">
-        
-    </div>
 
-    <div data-role="footer">
-        <h4>&#9996;PPK 2019&#9996;</h4>
+        <div role="main" class="ui-content">
+            <label>
+                Nama Event <input type="text" name="event"><br>
+            </label>
+
+            <label>
+                Alamat <input type="text" name="eaddress"><br>
+            </label>
+
+            <label>
+                Tanggal <input type="text" name="date"><br>
+            </label>
+
+            <label>
+                Harga <input type="text" name="harga"><br>
+            </label>
+
+            <label>
+                Jumlah Tiket <input type="text" name="tixavailable"><br>
+            </label>
+
+            <label>
+                Kode Tiket <input type="text" name="kodeTiket"><br>
+            </label>
+
+            <input type="submit" value="Submit" onclick="window.location.href='#page-event'">
+        </div>
     </div>
-    <script src=".js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
     <script>Application.initApplication();</script>
 </body>
 

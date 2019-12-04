@@ -10,7 +10,8 @@
 </head>
 
 <body>
-//Show Data Event
+    
+    //Show Data Event
     <div data-role="page" id="page-event" class="ui-body-b">
         <div data-role="header">
             <h1>Event</h1>
@@ -19,8 +20,7 @@
         <div role="main" class="ui-content">
             <ul id="list-event" data-role="listview" data-inset="true" data-filter="true">
             </ul>
-            <button type="button" onclick="window.location.href='#event-insert'">Tambahkan Data</button>
-            <button type="button" data-icon="refresh" onclick="window.location.reload();">Refresh</button>
+            <button type="button" onclick="window.location.href='#event-insert'">Tambahkan Event</button>
         </div>
 
 
@@ -28,24 +28,23 @@
         <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="javascript:" onclick="window.location.href='index.html'" data-icon="calendar" type="button">Event</a></li>
-                    <li><a href="javascript:" onclick="window.location.href='promosi.html'" data-icon="tag" type="button">Promo</a></li>
-                    <li><a href="#" data-icon="user">Member</a></li>
-                    <li><a href="#" data-icon="shop">Membeli</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='index.html'" data-icon="calendar"
+                            type="button">Event</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='promosi.html'" data-icon="tag"
+                            type="button">Promo</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='member.html'" data-icon="user"
+                            type="button">Member</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='pesanan.html'" data-icon="shop"
+                            type="button">Membeli</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
-//Detail Event
+    //Detail Event
     <div data-role="page" id="page-two">
         <div data-role="header">
             <h1>Detail Event</h1>
-        </div>
-        <div data-role="navbar">
-            <ul>
-                <li><a href="index.html" data-icon="arrow-l">Back</a></li>
-            </ul>
         </div>
 
         <div role="main" class="ui-content" id="main2">
@@ -59,19 +58,29 @@
         <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="javascript:" onclick="window.location.href='index.html'" data-icon="calendar" type="button">Event</a></li>
-                    <li><a href="javascript:" onclick="window.location.href='promosi.html'" data-icon="tag" type="button">Promo</a></li>                <li><a href="#" data-icon="user">Member</a></li>
-                    <li><a href="#" data-icon="shop">Membeli</a></li>
+                    <li><a href="index.html" data-icon="arrow-l">Back</a></li>
+                </ul>
+            </div>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="javascript:" onclick="window.location.href='index.html'" data-icon="calendar"
+                            type="button">Event</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='promosi.html'" data-icon="tag"
+                            type="button">Promo</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='member.html'" data-icon="user"
+                            type="button">Member</a></li>
+                    <li><a href="javascript:" onclick="window.location.href='pesanan.html'" data-icon="shop"
+                            type="button">Membeli</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
 
-//Insert Event
+    //Insert Event
     <div data-role="page" id="event-insert" class="ui-body-b">
         <div data-role="header">
-            <h1>Masukkan Order</h1>
+            <h1>Masukkan Data Event</h1>
         </div>
 
         <div role="main" class="ui-content">
@@ -96,13 +105,11 @@
             </label>
 
             <label>
-                Kode Tiket <input type="text" name="kodeTiket"><br>
-            </label>
-
             <input type="submit" value="Submit" onclick="window.location.href='#page-event'">
         </div>
     </div>
     <script src="js/app.js" type="text/javascript"></script>
     <script>Application.initApplication();</script>
 </body>
+
 </html>
